@@ -17,8 +17,7 @@ void Renderer::Shutdown()
 }
 bool Renderer::CreateWindow(int width, int height)
 {
-	m_window = SDL_CreateWindow("2D Renderer", 100, 100, width, height, SD
-		L_WINDOW_SHOWN);
+	m_window = SDL_CreateWindow("2D Renderer", 100, 100, width, height, SDL_WINDOW_SHOWN);
 	if (m_window == nullptr)
 	{
 		std::cout << "SDL Error: " << SDL_GetError() << std::endl;
