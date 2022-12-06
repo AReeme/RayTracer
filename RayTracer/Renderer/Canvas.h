@@ -1,5 +1,5 @@
 #pragma once
-#include "../Math/Coder.h"
+#include "../Math/Color.h"
 #include <SDL.h>
 #include <vector>
 
@@ -14,13 +14,14 @@ public:
     void Update();
     void Draw(const Renderer& renderer);
 
-    void Clear(const glm::vec4& color);
-    void DrawPoint(const glm::ivec2& point, const glm::vec4& color);
+    void Clear(const color4& color);
+    void DrawPoint(const glm::ivec2& point, const color4& color);
 
     inline int GetWidth() const { return m_width; }
     inline int GetHeight() const { return m_height; }
 
     friend class Renderer;
+  
 
 private:
     SDL_Texture* m_texture{ nullptr };
@@ -28,4 +29,5 @@ private:
 
     int m_width = 0;
     int m_height = 0;
+
 };

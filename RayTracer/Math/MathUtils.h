@@ -1,19 +1,19 @@
 #pragma once
 
 #include <glm/glm/glm.hpp>
-#include <stdlib.h>
+#include <cstdlib>
 #include <algorithm>
 
-inline float random01()
+inline float Random01()
 {
 	return rand() / (float)RAND_MAX;
 }
 
-inline float random(float min, float max)
+inline float Random(float min, float max)
 {
 	if (min > max) std::swap(min, max);
 
-	return min + (max - min) * random01();
+	return min + (max - min) * Random01();
 }
 
 template <typename T>
