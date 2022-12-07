@@ -1,17 +1,18 @@
 #pragma once
-#include "Canvas.h"
 #include <SDL.h>
+#include "Canvas.h"
+#include "Camera.h"
 #include "../Math/Ray.h"
 #include "../Objects/Sphere.h"
 
-class object;
+class Object;
 class Scene;
 
 class Renderer
 { 
 public:
 	Renderer() = default; 
-	void Render(Canvas& canvas, Scene& scene);
+	void Render(Canvas& canvas, Scene& scene, Camera& camera);
 
 	bool Initialize(); 
 	void Shutdown(); 
