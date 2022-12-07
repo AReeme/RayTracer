@@ -33,7 +33,7 @@ int main(int, char**)
 			break;
 		}
 		canvas.Clear({ 0, 0, 0, 1 });
-		renderer.Render(canvas, scene, camera);
+		renderer.Render(canvas, scene, camera, 1000);
 		canvas.Update();
 
 		renderer.CopyCanvas(canvas);
